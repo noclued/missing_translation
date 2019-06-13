@@ -6,8 +6,6 @@ use Noclue\ParamRecognizer\ParamRecognizer;
 use Noclue\Translation\Checker;
 use Noclue\Translation\MissingTranslation;
 
-require_once('../vendor/autoload.php');
-
 $paramsRecognizer = new ParamRecognizer($argv);
 $repoPath = $paramsRecognizer->getRepoPath();
 
