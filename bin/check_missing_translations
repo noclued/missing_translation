@@ -1,5 +1,7 @@
 #!/usr/bin/env php
 <?php
+$vendorPath = __DIR__."/../../..";
+require($vendorPath."/autoload.php");
 
 use Noclue\GitHelper\Helper;
 use Noclue\ParamRecognizer\ParamRecognizer;
