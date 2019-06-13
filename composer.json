@@ -14,5 +14,9 @@
     "psr-4": {
       "Noclue\\Translation\\": "src/"
     }
+  },
+  "require": {
+    "noclued/githelper": "^1.0",
+    "noclued/param_recognizer": "1.1"
   }
 }

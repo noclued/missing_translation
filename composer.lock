@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b98e7dfc1194b5a14f501ced86767e4f",
+    "content-hash": "b1a842b36f2000bdafeb62d03a82d74e",
     "packages": [
         {
             "name": "noclued/githelper",
