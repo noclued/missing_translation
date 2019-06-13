@@ -1,0 +1,84 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b98e7dfc1194b5a14f501ced86767e4f",
+    "packages": [
+        {
+            "name": "noclued/githelper",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noclued/githelper.git",
+                "reference": "bf1e050e05853bf9b6a248c80ac48da5c4cc15e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noclued/githelper/zipball/bf1e050e05853bf9b6a248c80ac48da5c4cc15e7",
+                "reference": "bf1e050e05853bf9b6a248c80ac48da5c4cc15e7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Noclue\\GitHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "noclue",
+                    "email": "noclue@yitd.pl"
+                }
+            ],
+            "description": "Helper for git extra info like 'get file names changed in last two commits', 'get new lines from last two commits', etc. You need to have accessable git!",
+            "time": "2019-06-13T06:35:58+00:00"
+        },
+        {
+            "name": "noclued/param_recognizer",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noclued/param_recognizer.git",
+                "reference": "e02235225891c7846ac78d1d7751835c95474d02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noclued/param_recognizer/zipball/e02235225891c7846ac78d1d7751835c95474d02",
+                "reference": "e02235225891c7846ac78d1d7751835c95474d02",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Noclue\\ParamRecognizer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "noclue",
+                    "email": "noclue@yitd.pl"
+                }
+            ],
+            "description": "Simple params recognizer for cli usage",
+            "time": "2019-06-13T10:36:00+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

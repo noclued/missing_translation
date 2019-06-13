@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+use Noclue\GitHelper\Helper;
+use Noclue\ParamRecognizer\ParamRecognizer;
+use Noclue\Translation\Checker;
+use Noclue\Translation\MissingTranslation;
+
+require_once('../vendor/autoload.php');
+
+$paramsRecognizer = new ParamRecognizer($argv);
+$repoPath = $paramsRecognizer->getRepoPath();
+
+$helper = new Helper($repoPath);
+$checker = new Checker($helper, $paramsRecognizer->getCommits());
+$result = $checker->check();
+$exitCode = 0;
+if (count($result) > 0) {
+    echo "Missing translations! You need to it!\n";
+    $exitCode = 1;
+    /** @var MissingTranslation $row */
+    foreach ($result as $row) {
+        $row = sprintf("%s | %s\t | %s\n", $row->getFileName(), $row->getLangCode(), $row->getTranslation());
+        echo $row;
+    }
+}
+
+exit($exitCode);

@@ -1,0 +1,22 @@
+{
+  "name": "noclued/missing_translation",
+  "type": "library",
+  "description": "Lib for isys. Checks if there are english translation provided by developer",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "noclue",
+      "email": "noclue@yitd.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Noclue\\Translation\\": "src/"
+    }
+  },
+  "bin": ["bin/check_missing_translations"],
+  "require": {
+    "noclued/githelper": "^1.0",
+    "noclued/param_recognizer": "^1.1"
+  }
+}
