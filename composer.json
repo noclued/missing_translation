@@ -1,5 +1,5 @@
 {
-  "name": "noclued/missing_translaton",
+  "name": "noclued/missing_translation",
   "type": "library",
   "description": "Lib for isys. Checks if there are english translation provided by developer",
   "license": "MIT",
@@ -9,6 +9,7 @@
       "email": "noclue@yitd.pl"
     }
   ],
+  "bin": ["bin/check_missing_translations"],
   "autoload": {
     "psr-4": {
       "Noclue\\Translation\\": "src/"
