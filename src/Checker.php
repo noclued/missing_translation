@@ -52,13 +52,31 @@ class Checker
             $this->commitsToCheckBack
         );
         $englishPlaceholders = $this->getPlaceHoldersFromAddedTranslations($addedEnglishTranslation);
+        $currentPlaceholders = $this->getCurrentPlaceholders($englishTranslationFileName);
         foreach ($addedTranslations as $addedTranslation) {
             list($placeHolder, $translation) = explode("=", $addedTranslation);
             $placeHolder = trim($placeHolder);
-            if (false === in_array($placeHolder, $englishPlaceholders)) {
+            if (false === in_array($placeHolder, $englishPlaceholders) &&
+                false === in_array($placeHolder, $currentPlaceholders)) {
                 $errorsCollection[] = new MissingTranslation($fileName, $placeHolder, 'en');
             }
         }
+    }
+
+    protected function getCurrentPlaceholders(string $fileName) : array
+    {
+        $rows = file($fileName);
+        $retValue = [];
+        foreach ($rows as $row) {
+            $row = trim($row);
+            if (empty($row) || $row === "") {
+                continue;
+            }
+            list($placeHolder, $translation) = explode("=", $row);
+            $retValue[] = trim($placeHolder);
+        }
+
+        return $retValue;
     }
 
     protected function getPlaceHoldersFromAddedTranslations(array $addedTranslations) : array
