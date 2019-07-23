@@ -72,6 +72,11 @@ class Checker
             if (empty($row) || $row === "") {
                 continue;
             }
+            $translationPattern = '/.+=.+;$/';
+            if (0 == preg_match($translationPattern, $row)) { //false or 0
+                continue;
+            }
+
             list($placeHolder, $translation) = explode("=", $row);
             $retValue[] = trim($placeHolder);
         }

@@ -16,7 +16,7 @@
     }
   },
   "require": {
-    "noclued/githelper": "1.1",
+    "noclued/githelper": "1.2",
     "noclued/param_recognizer": "1.1"
   }
 }
