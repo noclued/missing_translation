@@ -38,6 +38,13 @@ class Checker
 
     protected function validateTranslation(string $fileName, array $files, array &$errorsCollection) : void
     {
+        //first we need to know if there is any translations added.
+        // If not we can skip it. (FE- something removed or changed)
+        $addedTranslations = $this->helper->getLineAddedToFileSince($fileName, $this->commitsToCheckBack);
+        if (count($addedTranslations) < 1) {
+            return;
+        }
+
         //other translation exists? atm - we are searching only for english
         $englishTranslationFileName = str_replace('.pl', '.en', $fileName);
         if (false === in_array($englishTranslationFileName, $files)) {
@@ -46,7 +53,6 @@ class Checker
             return;
         }
 
-        $addedTranslations = $this->helper->getLineAddedToFileSince($fileName, $this->commitsToCheckBack);
         $addedEnglishTranslation = $this->helper->getLineAddedToFileSince(
             $englishTranslationFileName,
             $this->commitsToCheckBack
